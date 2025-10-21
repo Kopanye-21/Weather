@@ -1,0 +1,212 @@
+<!-- index.html (cleaned & modernized)
+
+Save this as: index.html
+It references styles.css below — save that as styles.css in the same folder.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAWS Home - WeatherSA Portal</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional: Weather icon font (you can keep your GIFs too) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" integrity="" crossorigin="anonymous">
+
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="weda.css">
+</head>
+
+<body>
+  <header class="site-header bg-white shadow-sm">
+    <div class="container py-3 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <a href="/" class="d-inline-block logo-link">
+          <img src="Pictures/SAWS logoFINAL.png" alt="SAWS" class="logo-img" width="70%">
+        </a>
+        <a href="https://www.environment.gov.za/" target="_blank" rel="noopener" class="d-inline-block">
+          <img src="Pictures/DEFF_LOGO.jpg" alt="DEFF" class="logo-img small" width="100%">
+        </a>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <img src="Pictures/Fraud Hotline.png" alt="Fraud Hotline" class="hotline-img">
+      </div>
+    </div>
+
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Weather</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Observations</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Climate</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Products &amp; Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    
+    <div class="announcement p-2 rounded mb-4">
+      <div class="ticker">
+        <div class="ticker__item">Monitoring Weather, Safeguarding Our Air: Championing Climate Action at the G20 Summit — Learn how we’re making a difference. <a href="#" class="ticker-link">Click here</a></div>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+     
+      <aside class="col-lg-4">
+        <div class="weather-card p-4 rounded shadow-sm bg-white">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h3 class="mb-0">Johannesburg</h3>
+              <div class="text-muted">Current</div>
+            </div>
+            <div class="text-end">
+              <div class="weather-emoji" aria-hidden>🌤️</div>
+              <div class="temp-display fs-4">29&deg;C</div>
+              <div class="text-muted small">Partly cloudy — Light breeze</div>
+            </div>
+          </div>
+
+          <div class="today-panel rounded p-3 bg-faded">
+            <h5 class="mb-2">Today's Weather Condition</h5>
+            <ul class="list-unstyled">
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Humidity</span><strong>30%</strong></li>
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Min Temperature</span><strong>15 &deg;C</strong></li>
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Max Temperature</span><strong>32 &deg;C</strong></li>
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Weather Condition</span><strong class="text-capitalize">clear skies</strong></li>
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Wind</span><strong>NNW — 9.3 km/h</strong></li>
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Rain Amount</span><strong>0 mm</strong></li>
+              <li class="d-flex justify-content-between py-1 border-bottom"><span>Rain Probability</span><strong>0%</strong></li>
+              <li class="d-flex justify-content-between py-1"><span>Sunrise / Sunset</span><strong>05:32 / 18:15</strong></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+    
+      <section class="col-lg-8">
+        <div class="forecast-grid row g-3">
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Today</h6>
+              <img src="Pictures/Partly Cloudy.gif" alt="Partly" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">29&deg;</span>
+                <span class="text-muted small">13&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Partly cloudy</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Friday</h6>
+              <img src="Pictures/Sunny.gif" alt="Sunny" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">26&deg;</span>
+                <span class="text-muted small">12&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Mostly clear</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Saturday</h6>
+              <img src="Pictures/Partly Cloudy.gif" alt="Partly cloudy" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">27&deg;</span>
+                <span class="text-muted small">16&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Partly cloudy</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Sunday</h6>
+              <img src="Pictures/Storm.gif" alt="Storm" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">29&deg;</span>
+                <span class="text-muted small">17&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Showers</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Monday</h6>
+              <img src="Pictures/Partly Cloudy.gif" alt="Partly cloudy" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">30&deg;</span>
+                <span class="text-muted small">17&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Partly cloudy</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Tuesday</h6>
+              <img src="Pictures/Partly Cloudy.gif" alt="Partly cloudy" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">30&deg;</span>
+                <span class="text-muted small">19&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Partly cloudy</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="day-card p-3 bg-white rounded shadow-sm text-center">
+              <h6 class="mb-1">Wednesday</h6>
+              <img src="Pictures/Partly Cloudy.gif" alt="Partly cloudy" class="forecast-icon mb-2">
+              <div class="d-flex justify-content-center gap-2 align-items-baseline">
+                <span class="fs-5 fw-bold">29&deg;</span>
+                <span class="text-muted small">18&deg;</span>
+              </div>
+              <div class="small text-muted mt-1">Partly cloudy</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer bg-dark text-light py-3 mt-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small>Code by Kopanye, Koketso and Priscilla</small>
+      <div class="footer-links small">
+        <a href="#" class="text-light text-decoration-none me-3">Privacy</a>
+        <a href="#" class="text-light text-decoration-none">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page Title (appears in browser tab) -->
+    <title>SAWS Home - WeatherSA Portal</title>
+
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="WeatherStyle.css">
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+    <!-- ================= HEADER SECTION WITH LOGOS ================= -->
+    <div class="container-fluid comLogoSection">
+        <div class="container compLogo">
+            <div class="row">
+                <!-- SAWS Logo -->
+                <div class="col-md-2 sawslogo">
+                    <a href="/">
+                        <img src="Pictures/SAWS logoFINAL.png" width="15%">
+                    </a>
+                </div>
+
+                <!-- Environmental Affairs Logo -->
+                <div class="col-md-2 dealogo" style="float: left;">
+                    <a href="https://www.environment.gov.za/" target="_blank">
+                        <img src="Pictures/DEFF_LOGO.jpg" class="img-responsive" width="15%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= FRAUD HOTLINE IMAGE ================= -->
+    <div class="col-md-2 hotlineText" style="float: left;">
+        <img src="Pictures/Fraud Hotline.png" style="background: darkgoldenrod;">
+    </div>
+
+    <!-- ================= WARNING SECTION ================= -->
+    <div class="col-md-12 WarningMain">
+        <!-- Empty div – reserved for warning text in the future -->
+        <div class="col-md-10 WarningDetails"></div>
+
+        <!-- Warning icon on the right -->
+        <div class="col-md-2 WarningText" style="float: right;">
+            <img src="Pictures/Warning.png" style="background: red;">
+        </div>
+    </div>
+
+    <!-- ================= MARQUEE (MOVING TEXT) ================= -->
+    <!-- Note: <marquee> is deprecated, but kept as requested -->
+    <div class="col-md-12 text-center" 
+         style="display:block; height:auto; padding:10px 0; margin:0 0 10px 0; background-color:darkgoldenrod; color:#000; font-weight: bolder;">
+        
+        <marquee direction="left">
+            <strong style="padding-right:750px; color:black;">
+                Monitoring Weather, Safeguarding Our Air: 
+                Championing Climate Action at the G20 Summit 
+                Learn How We’re Making a Difference
+                <span style="color:black; background-color:greenyellow;">Click Here</span>
+            </strong>
+        </marquee>
+    </div>
+    <!-- ================= CURRENT WEATHER WIDGET ================= -->
+    <div class="widget" style="align-items: center;">
+        
+        <!-- City Name -->
+        <div style="font-weight: bolder; font-size: larger; color: rgb(7, 21, 21);">
+            Johannesburg
+        </div>
+
+        <!-- "Current" label with weather info -->
+        <div style="color: rgb(3, 7, 7);">
+            Current
+
+            <!-- Weather icon (emoji or image) -->
+            <div class="weather-icon">🌤️</div>
+
+            <!-- Temperature and condition text -->
+            <div>
+                <div style="font-size: large;">22&deg;C</div>
+                <div style="font-size: large;">Partly cloudy — Light breeze</div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= TODAY'S DETAILED WEATHER PANEL ================= -->
+    <div class="panel panel-default" style="opacity: 0.8;">
+        
+        <!-- Panel Header -->
+        <div class="panel-heading" style="padding: 20px 0px 10px 20px;">
+            <span class="dayDesc2" style="font-weight: bolder; font-size: 14px;">Today</span>
+            <span style="font-weight: bolder; font-size: 14px;">'s Weather Condition</span>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="panel-body">
+            <!-- Unordered list to display weather metrics -->
+            <ul class="list-unstyled list-group">
+
+                <!-- Humidity -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-humidity"></span> Humidity</a>
+                    <a><span class="pull-right humiditySide">30%</span></a>
+                </li>
+
+                <!-- Min Temperature -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-thermometer"></span> Min Temperature</a>
+                    <a>
+                        <span class="pull-right minSide celsi">15 °C</span>
+                        <span class="pull-right minSide fahr" hidden>15 °C</span>
+                    </a>
+                </li>
+
+                <!-- Max Temperature -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-thermometer"></span> Max Temperature</a>
+                    <a>
+                        <span class="pull-right maxSide celsi">32 °C</span>
+                        <span class="pull-right maxSide fahr" hidden>32 °C</span>
+                    </a>
+                </li>
+
+                <!-- Weather Condition -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-raindrop"></span> Weather Condition</a>
+                    <a><span class="pull-right cloudiSide" style="text-transform: capitalize;">clear skies</span></a>
+                </li>
+
+                <!-- Wind Direction -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-wind-direction"></span> Wind Direction</a>
+                    <a><span class="pull-right windDirecSide">NNW</span></a>
+                </li>
+
+                <!-- Wind Speed -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-windy"></span> Wind Speed</a>
+                    <a>
+                        <span class="pull-right windSpeedKnotsSide">5.0 kt</span>
+                        <span class="pull-right">9.3 km/h &nbsp; | &nbsp;</span>
+                    </a>
+                </li>
+
+                <!-- Rain Amount -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-raindrop"></span> Rain Amount</a>
+                    <a><span class="pull-right PrecipitationAmountSide">0 mm</span></a>
+                </li>
+
+                <!-- Rain Probability -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-raindrop"></span> Rain Probability</a>
+                    <a><span class="pull-right PrecipitationPropabilitySide">0 %</span></a>
+                </li>
+
+                <!-- Sunrise / Sunset -->
+                <li class="list-group-item">
+                    <a><span class="wi wi-sunrise"></span> Sunrise / Sunset</a>
+                    <a>
+                        <span class="pull-right sunsetSide">18:15</span>
+                        <span class="pull-right sunriseSide">05:32 /</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- ================= 7-DAY FORECAST SECTION ================= -->
+    <div class="daysContainer">
+
+        <!-- ========== Example Day Box (repeat for each day) ========== -->
+        <div class="dayBox">
+            <!-- Day Name -->
+            <div class="dd">Mon</div>
+
+            <!-- Weather Icon -->
+            <div class="di">
+                <img src="Pictures/sunny.png" alt="Sunny icon" width="50">
+            </div>
+
+            <!-- Condition Text -->
+            <div class="dc">Sunny</div>
+
+            <!-- Min / Max Temperature -->
+            <div class="dt">
+                <span class="celsi">15°C / 28°C</span>
+                <span class="fahr" hidden>59°F / 82°F</span>
+            </div>
+        </div>
+
+        <!-- Repeat .dayBox for Tue, Wed, Thu, Fri, Sat, Sun -->
+        <!-- Each box shows day, icon, description, min/max temperature -->
+
+    </div>
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="footer">
+
+        <!-- Contact or Company Info -->
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: info@saws.co.za</p>
+            <p>Phone: +27 12 367 6000</p>
+            <p>Address: Pretoria, South Africa</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+
+        <!-- Quick Links (Optional) -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#">Home</a> |
+            <a href="#">Weather</a> |
+            <a href="#">Forecast</a> |
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 South African Weather Service. All Rights Reserved.</p>
+        </div>
+
+    </footer>

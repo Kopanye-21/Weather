@@ -1,0 +1,50 @@
+* Typography & base */
+:root{
+  --accent:#1e88e5; /* subtle blue accent */
+  --muted:#6c757d;
+  --card-bg: #ffffff;
+}
+
+body{
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:img src
+  color:#0b1a1f;
+  -webkit-font-smoothing:antialiased;
+}
+
+body
+{
+  background-image: url(Pictures/images.jpeg);
+  background-size: cover;
+}
+
+.site-header .logo-img{max-height:56px;}
+.site-header .logo-img.small{max-height:42px;}
+.hotline-img{max-height:42px;}
+
+.navbar .nav-link{color:var(--muted); font-weight:600}
+.navbar .nav-link:hover{color:var(--accent)}
+
+.announcement{background:#fffbe6; border:1px solid #f0e6b8}
+.ticker{overflow:hidden; white-space:nowrap}
+.ticker__item{display:inline-block; padding-left:100%; animation:slide 18s linear infinite}
+.ticker-link{margin-left:8px; font-weight:600; color:var(--accent)}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+.weather-card{min-height:220px}
+.weather-emoji{font-size:32px}
+.temp-display{font-size:22px; font-weight:700}
+.today-panel{background:#f8fafc}
+
+.forecast-grid .day-card{min-height:150px}
+.forecast-icon{height:48px; width:auto}
+
+.bg-faded{background:#f8fafc}
+
+.footer{border-top:1px solid rgba(255,255,255,0.05)}
+
+/* Responsive tweaks */
+@media (max-width:767px){
+  .ticker__item{animation-duration:22s}
+  .site-header .logo-img{max-height:44px}
+}

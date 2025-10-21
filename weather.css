@@ -1,0 +1,12 @@
+style {
+    background: #ff0000;
+}
+.col-md-2 WarningText {
+    padding: 0px 8px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+    border-radius: 5px 0px 0px 5px;
+}

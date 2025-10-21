@@ -1,0 +1,10 @@
+body
+{
+  background-image: url(Pictures/images.jpeg);
+  background-size: cover;
+}
+
+h1
+{
+  background-color: rgb(167, 134, 43);
+}
